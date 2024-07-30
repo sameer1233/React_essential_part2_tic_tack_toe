@@ -1,4 +1,5 @@
 import Player from './Player.jsx'
+import GameBoard from './GameBoard.jsx'
 export default function GameContainer(){
     return(
         <div id="game-container">
@@ -8,6 +9,7 @@ export default function GameContainer(){
          
         {/* gameboard */}
          Gamer Board
+         <GameBoard/>
       </div>
     )
 }

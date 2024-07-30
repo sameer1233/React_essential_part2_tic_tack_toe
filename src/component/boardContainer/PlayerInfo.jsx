@@ -17,7 +17,7 @@ export default function PlayerInfo({ playerName, playerSymbol}) {
   
   function editName(event){
       // console.log(event.target.value)
-      setName(()=>event.target.value)
+      setName(event.target.value)
   }
 //   logic for showing span instead of input or vise vera for is isEditing is ture or false
   const PlayerInfo = isEditing ? (<input type ="text" required value={initialName} onChange={editName}/>) : ( <span className="player-name">{initialName}</span>)

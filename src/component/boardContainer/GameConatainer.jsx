@@ -7,6 +7,7 @@ export default function GameContainer(){
          <Player />
          
         {/* gameboard */}
+         Gamer Board
       </div>
     )
 }

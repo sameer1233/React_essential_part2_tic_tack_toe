@@ -2,12 +2,17 @@ import {useState} from 'react'
 
 import PlayerInfo from "./PlayerInfo";
 import GameBoard from './GameBoard.jsx'
+
+
 export default function GameContainer(){
   const [active, setactive] = useState("X")
   function onSelectHandler(){
        setactive((currentActivePlayer) => (currentActivePlayer === "X" ? "O"  : "X"));
+
+
   }
      return(
+
         <div id="game-container">
     
          {/* <Player /> */}
@@ -18,6 +23,7 @@ export default function GameContainer(){
         {/* gameboard */}
          Gamer Board
          <GameBoard  onSelectingCell ={onSelectHandler} activePlayerSymbol={active}/>
+         
       </div>
     )
 }

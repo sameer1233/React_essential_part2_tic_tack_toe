@@ -349,3 +349,8 @@ ol {
     transform: scale(1);
   }
 }
+
+
+.winner{
+  color: white;
+}

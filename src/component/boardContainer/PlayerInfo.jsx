@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function PlayerInfo({ playerName, playerSymbol}) {
+export default function PlayerInfo({ playerName, playerSymbol, activePlayer}) {
   const [isEditing, setIsEditing] = useState(false);
   const [initialName, setName] = useState(playerName)
 //function for updating the state with the help of this maniputing playerName span element with input    field
@@ -22,7 +22,7 @@ export default function PlayerInfo({ playerName, playerSymbol}) {
 //   logic for showing span instead of input or vise vera for is isEditing is ture or false
   const PlayerInfo = isEditing ? (<input type ="text" required value={initialName} onChange={editName}/>) : ( <span className="player-name">{initialName}</span>)
   return (
-    <li>
+    <li className={activePlayer ? 'active': undefined}>
       <span className="player">
        {PlayerInfo}
         <span className="player-symbol">{playerSymbol}</span>

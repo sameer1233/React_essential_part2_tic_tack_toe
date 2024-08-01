@@ -42,7 +42,7 @@ export default function GameBoard({onSelectingCell, activePlayerSymbol}) {
               {row.map((col, colindex) => {
                 return (
                   <li key={colindex}>
-                    <button onClick={() => clickHandler(rowindex, colindex)}>{col}</button>
+                    <button onClick={() => clickHandler(rowindex, colindex)} disabled={col !==null} >{col}</button>
                   </li>
                 );
               })}
